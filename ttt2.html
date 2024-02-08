@@ -10,8 +10,13 @@
             width: 100px;
             height: 100px;
             display: inline-block;
-            grid-auto-columns: 100px;
         
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
         }
 
         .winner {
@@ -32,15 +37,16 @@
 </head>
 <body> 
     <h1>Tic Tac Toe Game</h1>
-    <script>
-        const NUM_SQUARES = 9;
-        for (i=0; i<NUM_SQUARES; i++)
-        {
-            id = "sq"+i;
-            document.write( "<div class='square' id='" + id + "'>1</div>" );
-        }
-    </script>
-
+    <div class="wrap"> 
+        <script>
+            const NUM_SQUARES = 9;
+            for (i=0; i<NUM_SQUARES; i++)
+            {
+                id = "sq"+i;
+                document.write( "<div class='square' id='" + id + "'>1</div>" );
+            }
+        </script>
+    </div>
     <div class="'winner"> X is Winner</div>
     <div class="'turn"> X is Turn</div>
 
