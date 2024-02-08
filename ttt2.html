@@ -2,14 +2,8 @@
 <html>
 <head>
     <style>
-        .myDiv {
-            display: grid;
-            grid-template-columns: 100px 100px 100px;
-            grid-template-rows: 100px 100px 100px;
-            grid-gap: 5px;
-        }
 
-        .myDiv > div {
+        .square {
             background-color: gold;
             font-size: 20px;
             display: grid;
@@ -19,24 +13,16 @@
             border-color:black;
         }
 
-        .myDiv > div:hover {
-        	font-weight: 500;
-        	background-color: orange;
-        }
-        
     </style>
 </head>
 <body> 
-    <div class="myDiv">
-        <div>X</div>
-        <div></div>
-        <div></div> 
-        <div></div>
-        <div></div>
-        <div>X</div>
-        <div>O</div>
-        <div>O</div>
-        <div>O</div>
-    </div>
+    <script>
+        const NUM_SQUARES = 9;
+        for (i=0; i<NUM_SQUARES; i++)
+        {
+            id = "sq"+i;
+            document.write( "<div class='square' id='" + id + "'></div>" );
+        }
+    </script>
 </body>
 </html>
